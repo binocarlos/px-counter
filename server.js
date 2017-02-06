@@ -16,8 +16,8 @@ module.exports = function(opts){
     fs.writeFileSync(filePath, JSON.stringify([]))
   }
   else {
-    console.log('exiting data found')
-    console.log(fs.readFileSync(filePath))
+    console.log('existing data found')
+    console.log(fs.readFileSync(filePath, 'utf8'))
   }
 
   router.addRoute("/v1/items", {
