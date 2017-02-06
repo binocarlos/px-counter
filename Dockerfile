@@ -3,6 +3,6 @@ MAINTAINER kaiyadavenport@gmail.com
 WORKDIR /app
 COPY ./package.json /app/package.json
 RUN npm install
-COPY ./src /app/src
+COPY . /app
 EXPOSE 8080
-ENTRYPOINT ["node", "src/index.js"]
+ENTRYPOINT ["node", "index.js"]

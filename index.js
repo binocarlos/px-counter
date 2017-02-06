@@ -7,8 +7,8 @@ var args = require('minimist')(process.argv, {
     v: 'verbose'
   },
   default:{
-    port: 8085,
-    filepath: __dirname + '/.data/items.json'
+    port: 8080,
+    filepath: '/tmp/px-counter-items.json'
   },
   boolean:['verbose']
 })
