@@ -38,6 +38,7 @@ module.exports = function(settings) {
       json: true
     }, function(err, response, body) {
       items1 = body
+      console.log('# HAVE ' + body.length + ' existing items')
       t.end()
     })
   })
@@ -60,6 +61,7 @@ module.exports = function(settings) {
       json: true
     }, function(err, response, body) {
       items2 = body
+      console.log('# HAVE ' + body.length + ' items after write')
       t.equal(items2.length, items1.length + 1, 'count2 is 1 more than count1')
       t.end()
     })
