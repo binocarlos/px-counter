@@ -5,7 +5,7 @@ var args = require('minimist')(process.argv, {
     t: 'test'
   },
   default:{
-    port: process.env.PORT || 8080,
+    port: process.env.LISTEN_PORT || 8080,
     filepath: process.env.FILEPATH || '/tmp/px-counter-items.json'
   },
   boolean:['test']
