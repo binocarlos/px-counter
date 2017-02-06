@@ -1,0 +1,13 @@
+{
+  "name": "px-counter",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A simple app to demonstrate keeping state in a file",
+  "main": "index.js",
+  "dependencies": {
+    "concat-stream": "^1.4.8",
+    "ecstatic": "^0.8.0",
+    "minimist": "^1.1.1",
+    "routes-router": "^4.1.2"
+  }
+}
