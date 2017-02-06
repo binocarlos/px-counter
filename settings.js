@@ -5,10 +5,14 @@ var args = require('minimist')(process.argv, {
     t: 'test'
   },
   default:{
-    port: 8080,
-    filepath: '/tmp/px-counter-items.json'
+    port: process.env.PORT || 8080,
+    filepath: process.env.FILEPATH || '/tmp/px-counter-items.json'
   },
   boolean:['test']
 })
+
+if(process.env.NODE_ENV == 'test') {
+  args.test = true
+}
 
 module.exports = args

@@ -9,7 +9,10 @@ module.exports = function(opts){
   var fileServer = ecstatic({ root: __dirname + '/client' })
   var filePath = opts.filepath
 
+  console.log('using filepath: ' + filePath)
+
   if(!fs.existsSync(filePath)) {
+    console.log('creating filepath: ' + filePath)
     fs.writeFileSync(filePath, JSON.stringify([]))
   }
 

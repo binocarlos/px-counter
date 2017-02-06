@@ -1,10 +1,15 @@
+var http = require('http')
+var Server = require('./server')
 var settings = require('./settings')
-var App = require('./app')
 var Test = require('./test')
 
 if(settings.test) {
   Test(settings)
 }
 else {
-  App(settings)
+  var server = http.createServer(Server(settings))
+
+  server.listen(settings.port, function(){
+    console.log('server listening on port: ' + settings.port)
+  })  
 }
